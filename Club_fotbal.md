@@ -155,7 +155,9 @@ Pentru a simula diverse scenarii care s-ar putea întâmpla în viața reală, a
 * select  Nume,Prenume from  Date_copii where id_antrenor=3 having prenume='Filip';
 * select Nume,Prenume,id_antrenor from Date_copii where id_antrenor=1 or Id_antrenor=3;
 * select * from Date_copii where Nume= 'Craciun'and Prenume= 'Sebastian';
-* select * from Echipamente group by id;</em>
+* select * from Echipamente group by id;
+* select Antrenori.ID,Nume_antrenor,Prenume_antrenor,count(id_copil) from Antrenori
+ inner join Date_copii ID where Antrenori.ID=ID_antrenor group by Antrenori.ID,Nume_antrenor,Prenume_antrenor;</em>
     
 
 </ol>
