@@ -144,7 +144,7 @@ select Nume,Prenume from Date_copii order by Nume;
 #afisez din tabelul Date_copii toate datele ordonate dupa data nasterii
 select * from Date_copii order by Data_nasterii;
 
-#afisez ID-ul antrenorolor,Numele,prenumele si numarul de copii pe care ii antreneaza fieacare dintre ei   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#afisez ID-ul antrenorolor,Numele,prenumele si numarul de copii pe care ii antreneaza fieacare dintre ei  
 select Antrenori.ID,Nume_antrenor,Prenume_antrenor,count(id_copil) from Antrenori
  inner join Date_copii ID where Antrenori.ID=ID_antrenor group by Antrenori.ID,Nume_antrenor,Prenume_antrenor;
 
