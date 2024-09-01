@@ -12,6 +12,53 @@
 Mai jos gasiti schema bazei de date si contine toate tabelele si relatiile dintre ele.
 
 
+<strong> Tabelele sunt urmatoarele: </strong>
+
+<ul>
+  <strong> Date_copii:</strong>
+    <li> ID_copil</li>
+    <li> Nume</li>
+    <li> Prenume </li>
+    <li> Data_nasterii </li>
+    <li> ID_antrenor </li></ul><br>
+  
+ <ul> <strong> Date_parinti</strong>
+    <li> ID </li>
+    <li> Nume </li>
+    <li> Prenume </li>
+    <li> Numar_telefon </li>
+    <li> ID_copil </li></ul><br>
+    
+ <ul><strong> Antrenori</strong>
+    <li> ID </li>
+    <li> Nume_antrenor </li>
+    <li> Prenume_antrenor </li>
+    <li> Numar_telefon </li></ul><br>
+    
+  <ul><strong> Taxa </strong>
+    <li> ID </li>
+    <li> ID_copil</li>
+    <li> Ianuarie </li>
+    <li> Februarie</li>
+    <li> Martie </li>
+    <li> Aprilie </li>
+    <li> Mai </li>
+    <li> Iunie </li>
+    <li> Iulie </li>
+    <li> August </li>
+    <li> Septembrie </li>
+    <li> Octombrie </li>
+    <li> Noiembrie </li>
+    <li> Decembrie </li></ul><br>
+
+ <ul> <strong> Echipamente </strong>
+    <li> ID </li>
+    <li> Marime </li>
+    <li> Nume_inscriptionat </li>
+    <li> Numar_inscriptionat </li>
+    <li> ID_copil </li></ul><br>
+</ul><br>
+
 <strong> Tabelele sunt conectate intre ele astfel: </strong>
 
 <ul>
@@ -80,13 +127,13 @@ Numar_telefon varchar(13));</em>
 * alter table Taxa rename Taxa_copii;
 * alter table Echipamente modify Marime varchar(20);</em>
 
-  
-  <strong> 2.2 DML (Data Manipulation Language)</strong>
+
+  <strong>2.2 DML (Data Manipulation Language)</strong>
 
   Pentru a putea utiliza baza de date am inserat in tabelele diverse date necesare pentru a efectua interogări și a manipula datele. 
   În procesul de testare, aceste date necesare sunt identificate în faza de proiectare a testului și create în faza de implementare a testului. 
 
-  Mai jos puteti gasi toate instructiunile de <strong>inserare </strong> a datelor care au fost create in acest proiect:
+  Mai jos puteti gasi toate instructiunile de <strong>inserare </strong> a datelor care au fost create in acest proiect pe o singura linie (primul exemplu) sau pe mai multe linii:
   
  * <em> insert into Date_copii (Nume,Prenume,Data_nasterii) values ('Craciun','Sebastian','2019-01-19');
  * insert into Date_copii (Nume,Prenume,Data_nasterii) values 
@@ -131,7 +178,7 @@ values ('Ciocan','Cristian','0741222545'),
 
   <strong>2.3 DQL (Data Query Language)</strong>
 
-După procesul de testare, am <strong>șters</strong> datele care nu mai erau relevante pentru a păstra baza de date curată: 
+După procesul de testare, am <strong>șters</strong> datele care nu mai erau relevante pentru a păstra baza de date curată,folosind instructiunea <strong> DROP </strong> cat si <strong> DELETE </strong>: 
 
 * <em>delete from Taxa where id=5;
 * drop table Taxa;
